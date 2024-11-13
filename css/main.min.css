@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Work Sans", serif;
+  font-size: 1.6rem;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 144rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 3%;
+}
+
+.imagem-fundo {
+  background-image: url(../assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.faqs {
+  background-color: white;
+  max-width: 60rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 3%;
+}
+.faqs span {
+  display: inline-block;
+  font-size: 5.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.faqs dl dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(292, 42%, 14%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-top: 1px solid hsl(275, 100%, 97%);
+  padding-top: 2%;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.faqs dl dt::after {
+  content: url(../assets/images/icon-plus.svg);
+  display: inline-block;
+}
+.faqs dl dt:hover {
+  color: hsl(276, 72%, 65%);
+}
+.faqs dl dt.ativo::after {
+  content: url(../assets/images/icon-minus.svg);
+  transition: 2000ms;
+}
+.faqs dl dd {
+  padding: 2% 0;
+  color: hsl(292, 16%, 49%);
+  line-height: 150%;
+  display: none;
+}
+.faqs dl dd.ativo {
+  display: block;
+  animation: ativarAnimacao 0.3s forwards;
+}
+@keyframes ativarAnimacao {
+  to {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.min.css.map */
